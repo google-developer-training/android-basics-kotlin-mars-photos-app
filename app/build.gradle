@@ -63,4 +63,9 @@ dependencies {
 
     implementation 'com.google.android.material:material:1.2.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    // Retrofit with Moshi Converter
+    implementation "com.squareup.retrofit2:converter-scalars:2.9.0"
 }
