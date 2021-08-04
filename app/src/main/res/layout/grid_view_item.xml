@@ -19,6 +19,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="photo"
+            type="com.example.android.marsphotos.network.MarsPhoto" />
+    </data>
+
     <ImageView
         android:id="@+id/mars_image"
         android:layout_width="wrap_content"
@@ -26,5 +33,6 @@
         android:scaleType="fitXY"
         android:adjustViewBounds="true"
         android:padding="2dp"
-        tools:src="@tools:sample/backgrounds/scenic"/>
+        tools:src="@tools:sample/backgrounds/scenic"
+        app:imageUrl="@{photo.imgSrcUrl}"/>
 </layout>
