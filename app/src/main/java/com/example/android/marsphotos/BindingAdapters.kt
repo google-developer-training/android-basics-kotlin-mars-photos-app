@@ -24,7 +24,6 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.example.android.marsphotos.network.MarsPhoto
 import com.example.android.marsphotos.overview.MarsApiStatus
-import com.example.android.marsphotos.overview.MarsApiStatus.*
 import com.example.android.marsphotos.overview.PhotoGridAdapter
 
 /**
@@ -57,19 +56,18 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
  * hides the image view.
  */
 @BindingAdapter("marsApiStatus")
-fun bindStatus(statusImageView: ImageView, status: MarsApiStatus?) {
+fun bindStatus(statusImageView: ImageView, status: MarsApiStatus) {
     when (status) {
-        LOADING -> {
+        MarsApiStatus.LOADING -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.loading_animation)
         }
-        ERROR -> {
+        MarsApiStatus.ERROR -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.ic_connection_error)
         }
-        DONE -> {
+        MarsApiStatus.DONE -> {
             statusImageView.visibility = View.GONE
         }
-        null -> TODO()
     }
 }
