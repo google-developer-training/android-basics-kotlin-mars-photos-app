@@ -20,7 +20,7 @@ buildscript {
         // Versions for all the dependencies we plan to use. It's particularly useful for kotlin
         // where the versions of the plugin needs to be the same as the version of the
         // library defined in the app Gradle file
-        kotlin_version = "1.7.10"
+        kotlin_version = "1.7.20"
     }
     repositories {
         google()
